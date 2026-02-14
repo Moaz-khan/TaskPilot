@@ -20,7 +20,7 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 // This ensures cookies are treated as same-origin, fixing authentication issues.
 const BASE_URL = process.env.NODE_ENV === 'production'
   ? ''
-  : normalizeBaseUrl('https://task-pilot-u987.vercel.app' || 'http://localhost:8000');
+  : normalizeBaseUrl(API_BASE_URL || 'http://localhost:8000');
 
 export const apiConfig = {
   baseUrl: BASE_URL,
